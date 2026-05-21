@@ -1,20 +1,20 @@
 class TiresiasCli < Formula
-  desc "Tiresias firmware development environment checker"
+  desc "Interactive Tiresias firmware development environment helper"
   homepage "https://github.com/felipepimentab/tiresias-cli"
-  version "0.1.4"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/felipepimentab/tiresias-cli/releases/download/v0.1.4/tiresias-macos"
-      sha256 "7d12844d1baa1e116e1e32518bac4917620b9db3c579fa75cc126fcb363d2f83"
+      url "https://github.com/felipepimentab/tiresias-cli/releases/download/v0.1.6/tiresias-macos"
+      sha256 "5771e0972a37e744867c7474f6bc2da9a053f1b528085386d0d9475a98219056"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/felipepimentab/tiresias-cli/releases/download/v0.1.4/tiresias-linux"
-      sha256 "a1045658d449832269bed5b6a5d4d5403f0a799789dc452c950e020392decba7"
+      url "https://github.com/felipepimentab/tiresias-cli/releases/download/v0.1.6/tiresias-linux"
+      sha256 "611d33ddb8f9741472d00bef482cdb7c1c9924dc8d177ff79d3c1da30cc1f973"
     end
   end
 
@@ -28,6 +28,6 @@ class TiresiasCli < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/tiresias --version")
-    assert_match "Tiresias firmware development environment checker", shell_output("#{bin}/tiresias --help")
+    assert_match "Interactive Tiresias firmware development environment helper", shell_output("#{bin}/tiresias --help")
   end
 end
